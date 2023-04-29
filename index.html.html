@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <title>calculator</title>
+</head>
+<style>
+    body {
+background-color:black;
+    }
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height:300px;
+
+  background-color:black;
+  border: solid 1px greenyellow;
+  margin: auto;
+  padding: 10px;
+  border-radius: 12px;
+  
+  padding: 50px;
+    box-shadow: 0 0 50px  rgb(0, 255, 51);
+  
+                0 0 100px  rgb(0, 255, 51);
+  
+                0 0 100px  rgb(0, 255, 51);
+  
+                0 0 100px rgb(0, 255, 51);
+  }
+
+
+
+.output {
+  background-color: greenyellow;
+  width: 250px;
+  height:20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  
+}
+
+button  {
+  font-size: xx-large;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  
+  background-color: greenyellow;
+  color:black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button :active {
+  transform: scale(0.95);
+  transform-style: preserve-3d;
+}
+button:hover{
+    background:  rgb(0, 255, 51);
+  
+    color:greenyellow;
+    border-radius: 5px rgb(0,255,51);
+    box-shadow: 0 0 5px rgb(0, 255, 51),
+                0 0 25px rgb(0, 255, 51) ,
+                0 0 50px  rgb(0, 255, 51),
+                0 0 100px rgb(0, 255, 51);
+  }
+h1{
+    font-size: 40px;
+    color: greenyellow;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+  
+
+
+  
+
+</style>
+
+<body>
+    <h1>calculate me!</h1>
+  <div class="calculator">
+    <div class="output">
+      <span id="result">0</span>
+    </div>
+    <div class="button">
+      
+
+      <button onclick="clearResult()">C</button>
+      <button onclick="updateResult('/')">÷</button>
+      <button onclick="updateResult('*')">x</button>
+      <button onclick="updateResult('-')">-</button>
+      <button onclick="updateResult('+')">+</button>
+      <button onclick="updateResult('9')">8</button>
+      <button onclick="updateResult('8')">8</button>
+      <button onclick="updateResult('7')">7</button>
+      <button onclick="updateResult('6')">6</button>
+      <button onclick="updateResult('5')">5</button>
+      <button onclick="updateResult('4')">4</button>
+      <button onclick="updateResult('3')">3</button>
+      <button onclick="updateResult('2')">2</button>
+      <button onclick="updateResult('1')">1</button>
+      <button onclick="updateResult('0')">0</button>
+      <button onclick="updateResult('.')">.</button>
+      <button onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script> let result = document.getElementById('result');
+
+    function updateResult(value) {
+      result.innerText += value;
+    }
+    
+    function calculate() {
+      result.innerText = eval(result.innerText);
+    }
+    
+    function clearResult() {
+      result.innerText =0;
+    }</script>
+</body>
+
+</html>
+  
